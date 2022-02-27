@@ -1,1 +1,1 @@
-# training
+C code training folder
