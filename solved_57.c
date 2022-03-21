@@ -3,8 +3,13 @@
 
 int main(void)
 {
+	int t;
 	int a, b;
-	scanf("%d %d", &a, &b);
-	printf("%d", a - b);
+	scanf("%d", &t);
+	for (int i = 0; i < t; i++)
+	{
+		scanf("%d %d", &a, &b);
+		printf("Case #%d: %d\n",i+1, a + b);
+	}
 	return 0;
 }

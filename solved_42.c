@@ -1,10 +1,6 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+#include<stdio.h>
 
 int main(void)
 {
-	int a, b;
-	scanf("%d %d", &a, &b);
-	printf("%d", a - b);
-	return 0;
+	printf("강한친구 대한육군\n강한친구 대한육군");
 }

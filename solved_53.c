@@ -3,8 +3,10 @@
 
 int main(void)
 {
-	int a, b;
-	scanf("%d %d", &a, &b);
-	printf("%d", a - b);
-	return 0;
+	int a=0, b=0;
+	while (scanf("%d %d", &a, &b) != EOF)
+	{
+		printf("%d\n", a + b);
+	}
+
 }
