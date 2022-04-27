@@ -14,32 +14,30 @@
 
 window.onload= function(){
     function solution(id_list, report, k) {
-        var answer = [];
-        let report_len = report.length;
+        let answer = [];
         let id_len = id_list.length;
         let report_set = new Set(report);
+        let report_len = report_set.size;
+        for(let i = 0;i< id_len;i++){
+            if(answer[i] == null)
+                answer[i] = 0;
+        }
         for (let i = 0; i < report_len; i++) {
             let re_count = 0;
-            let report_set_i = report_set[i];
+            let report_set_i = [...report_set][i];
             let report_set_i_split = (report_set_i || '').split(' ');
             for (let j = 0; j < report_len; j++) {
-                let report_set_j = report_set[j];
+                let report_set_j = [...report_set][j];
                 let report_set_j_split = (report_set_j || '').split(' ');
                 if (report_set_i_split[1] == report_set_j_split[1]) {
                     re_count += 1;
                 };
-                console.log(report[i]);
-                console.log(report_set);
-                console.log(report_set_i);
-                console.log(report_set_i_split);
             }
-            
-            console.log(re_count);
             if (re_count >= k) {
                 let reporter = report_set_i_split[0];
-                for (let i = 0; i < id_len; i++) {
-                    if (id_list[i] == reporter) {
-                        answer[i] += 1;
+                for (let l = 0; l < id_len; l++) {
+                    if (id_list[l] == reporter) {
+                        answer[l] += 1;
                     }
                 }
             }
@@ -48,3 +46,5 @@ window.onload= function(){
     }
     console.log(solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"], 2));
 }
+
+
